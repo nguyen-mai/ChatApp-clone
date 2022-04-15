@@ -59,7 +59,7 @@ class SignUpVC: UIViewController {
         
         Custom.custom.customBackgroundBtn(button: signUpButton, text: "Sign Up".uppercased(), font: "Lato-Bold", size: 16, textColor: .white, backgroundColor: .lightGrayColor)
         
-        Custom.custom.customLabel(label: signInLabel, text: "Have an account?", font: "Lato-Regular", size: 14, color: .gray)
+        Custom.custom.customLabel(label: signInLabel, text: "Do have an account?", font: "Lato-Regular", size: 14, color: .gray)
         Custom.custom.customButton(button: signInButton, text: "Sign In", font: "Lato-Regular", size: 14, color: .mainColor)
         
         myMutableString = NSMutableAttributedString(string: myString, attributes: [NSAttributedString.Key.font: UIFont(name: "Lato-Regular", size: 14.0)!])

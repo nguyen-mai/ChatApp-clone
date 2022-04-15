@@ -57,7 +57,7 @@ class SignInVC: UIViewController {
         Custom.custom.customLabel(label: signInLabel, text: "Sign In", font: "Lato-Bold", size: 32, color: .mainColor)
         Custom.custom.customLabel(label: emailLabel, text: "Email".uppercased(), font: "Lato-Regular", size: 14, color: .gray)
         Custom.custom.customLabel(label: passwordLabel, text: "Password".uppercased(), font: "Lato-Regular", size: 14, color: .gray)
-        Custom.custom.customLabel(label: signUpLabel, text: "Haven't you an account?", font: "Lato-Regular", size: 14, color: .gray)
+        Custom.custom.customLabel(label: signUpLabel, text: "Don't have an account?", font: "Lato-Regular", size: 14, color: .gray)
         
         Custom.custom.customTextField(textfield: emailTextField, text: "Enter email...", font: "Lato-Regular", size: 18, color: .black, icon: "unselectedMail")
         Custom.custom.customTextField(textfield: passwordTextField, text: "Enter password...", font: "Lato-Regular", size: 18, color: .black, icon: "unselectedKey")
