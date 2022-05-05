@@ -1,0 +1,23 @@
+{
+  "name": "chatappclone",
+  "version": "1.0.0",
+  "description": "chat app clone",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nguyen-mai/ChatApp-clone.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nguyen-mai/ChatApp-clone/issues"
+  },
+  "homepage": "https://github.com/nguyen-mai/ChatApp-clone#readme",
+  "dependencies": {
+    "socket.io": "*",
+    "express": "*"
+  }
+}

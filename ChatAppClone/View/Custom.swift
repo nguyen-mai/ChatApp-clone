@@ -25,6 +25,8 @@ class Custom {
         textfield.borderStyle = .none
         textfield.font = UIFont(name: font, size: size)
         textfield.textColor = color
+        textfield.keyboardType = .emailAddress
+        textfield.returnKeyType = .done
         
         // custom textfield {
         // Create the bottom line
@@ -54,6 +56,26 @@ class Custom {
         iconView.image = UIImage(named: icon)
     }
     
+    func customTextFieldInput(textfield: UITextField, leftIcon: String, rightIcon: String) {
+        // For adding an Image on right side
+        textfield.leftViewMode = .always
+        let iconLeftView = UIButton(frame: CGRect(x: 0, y: 0, width: 20, height: 20))
+        let iconLeftContainerView: UIView = UIView(frame:
+                          CGRect(x: 20, y: 0, width: 30, height: 30))
+        iconLeftContainerView.addSubview(iconLeftView)
+        textfield.leftView = iconLeftContainerView
+        iconLeftView.setImage(UIImage(named: leftIcon), for: .normal)
+        
+        // For adding an Image on right side
+//        textfield.rightViewMode = .always
+//        let iconRightView = UIButton(frame: CGRect(x: 0, y: 0, width: 20, height: 20))
+//        let iconRightContainerView: UIView = UIView(frame:
+//                          CGRect(x: 20, y: 0, width: 30, height: 30))
+//        iconRightContainerView.addSubview(iconRightView)
+//        textfield.rightViewMode = iconRightContainerView
+//        iconRightView.setImage(UIImage(named: rightIcon), for: .normal)
+    }
+    
     func customButton(button: UIButton, text: String, font: String, size: CGFloat, color: UIColor) {
         button.setTitle(text, for: .normal)
         button.setTitleColor(color, for: .normal)
@@ -69,7 +91,6 @@ class Custom {
         button.layer.cornerRadius = button.frame.height / 2
         button.tintColor = textColor
     }
-    
 }
 
 class CheckBoxButton: UIButton {

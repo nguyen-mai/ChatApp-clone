@@ -53,6 +53,9 @@ class SignInVC: UIViewController {
         
         hideNavigationBar(animated: true)
         
+        emailTextField.delegate = self
+        passwordTextField.delegate = self
+        
         Custom.custom.customLabel(label: titleAppLabel, text: "ChatApp clone", font: "Lato-Light", size: 26, color: .black)
         Custom.custom.customLabel(label: signInLabel, text: "Sign In", font: "Lato-Bold", size: 32, color: .mainColor)
         Custom.custom.customLabel(label: emailLabel, text: "Email".uppercased(), font: "Lato-Regular", size: 14, color: .gray)
@@ -99,4 +102,11 @@ class SignInVC: UIViewController {
         }
     }
     
+}
+
+extension SignInVC: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        self.view.endEditing(true)
+        return false
+    }
 }

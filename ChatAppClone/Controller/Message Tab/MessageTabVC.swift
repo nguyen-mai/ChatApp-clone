@@ -63,5 +63,30 @@ extension MessageTabVC: UITableViewDelegate, UITableViewDataSource {
         cell.configure(with: users[indexPath.row])
         return cell
     }
+    
+    func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        let deleteAction = UIContextualAction(style: .destructive, title: "Delete") { (action, sourceView, completionHandler) in
+            print("index path of delete: \(indexPath)")
+            self.users.remove(at: indexPath.row)
+            tableView.deleteRows(at: [indexPath], with: .automatic)
+            completionHandler(true)
+        }
+        let editAction = UIContextualAction(style: .normal, title: "Edit") { (action, sourceView, completionHandler) in
+//            self.edit
+            print("index path of edit: \(indexPath)")
+            completionHandler(true)
+        }
+        let swipeActions = UISwipeActionsConfiguration(actions: [deleteAction, editAction])
+        // không kéo hết cell
+        swipeActions.performsFirstActionWithFullSwipe = false
+        return swipeActions
+    }
+        
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let index = indexPath.row
+        let vc = storyboard?.instantiateViewController(withIdentifier: "DetailMessageVC") as! DetailMessageVC
+        navigationController?.pushViewController(vc, animated: true)
+    }
 }
 
