@@ -7,5 +7,6 @@ target 'ChatAppClone' do
 
   # Pods for ChatAppClone
   pod 'Socket.IO-Client-Swift'
+  pod 'Alamofire'
 
 end

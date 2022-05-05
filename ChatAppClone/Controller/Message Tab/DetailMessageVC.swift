@@ -28,7 +28,6 @@ final class SerVice: ObservableObject {
                 }
             }
         }
-        
         socket.connect()
     }
 }
